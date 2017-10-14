@@ -1,0 +1,42 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/test/test",
+    "pages/navi/navi"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "微信",
+    "navigationBarTextStyle":"black",
+    "backgroundColor":"#eeeeee"
+  },
+  "tabBar": {
+    "color":"#FFFF00",
+    "selectedColor":"#8B8682",
+    "backgroundColor": "#87CEFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"Image/500684.png",
+        "selectedIconPath":"Image/500685.png",
+        "borderStyle":"Black"
+      },
+      {
+        "pagePath": "pages/test/test",
+        "text": "测试页",
+        "iconPath": "Image/500684.png",
+        "selectedIconPath": "Image/500685.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志页",
+        "iconPath": "Image/500684.png",
+        "selectedIconPath": "Image/500685.png"
+      }
+    ]
+  },
+  "debug":"true"
+}

@@ -1,0 +1,8 @@
+<view>测试页</view>
+<view>用户名：{{username}}</view>
+<view>密码：{{userpass}}</view>
+<button bindtap='tianzhuan'>跳转页面</button> 
+<button bindtap='tiaozhuanNavi'>跳转Navi</button> 
+<navigator hover-class='avtive' url='../navi/navi'>跳转Navi</navigator>
+<!-- redirect = true 跳转并关闭当前页 -->
+<navigator redirect='true' url='../navi/navi'>跳转Navi</navigator>

@@ -1,0 +1,4 @@
+<!--pages/navi/navi.wxml-->
+<text>pages/navi/navi.wxml</text>
+<view>Navi.wxml 页面</view>
+<button bindtap='fanhui'>返回</button>
