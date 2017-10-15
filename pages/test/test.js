@@ -9,7 +9,12 @@ Page({
     username:"璇狼之风",
     userpass:null,
     id:3,
-    bol:false
+    bol:false,
+    arr:[1,2,3,4,5],
+    item: {
+      index: 0,
+      msg: 'this is a template'
+    }
   }, 
   show:function(){
     var boll = this.data.bol;

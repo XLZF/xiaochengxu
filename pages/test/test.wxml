@@ -21,3 +21,26 @@
   <view>111</view>
   <view>111</view>
 </block>
+<!-- Hidden在view 上是不生效的 -->
+<text hidden="{{true}}">我是一段文本</text>
+<view>{{bol?"正":"反"}}</view>
+<view>Hello{{username}}</view>
+<view>{{id+8}}</view>
+<view wx:for="{{arr}}">项目：{{item}}</view>
+<!-- 组合输出数组 -->
+<view wx:for="{{[id,5,4,3,2,1]}}">项目：{{item}}</view>
+<!-- 定义一个模板 (独立作用域)-->
+<template name="obj">
+  <view>第一个对象：{{a}}</view>
+  <view>第二个对象：{{b}}</view>
+  <view>第三个对象：{{c}}</view>
+</template>
+<!-- 使用上面的模板 -->
+<template is="obj" data="{{a:111,b:222,c:username}}"></template>
+<template name="msgItem">
+  <view>第一个对象：{{index}}</view>
+  <view>第二个对象：{{msg}}</view>
+  <view>第三个对象：{{time}}</view>
+</template>
+<template is="msgItem" data="{{...item,time:username}}"/>
+
