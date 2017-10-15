@@ -20,21 +20,21 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath":"Image/500684.png",
-        "selectedIconPath":"Image/500685.png",
+        "iconPath":"Image/500686.png",
+        "selectedIconPath":"Image/500687.png",
         "borderStyle":"Black"
       },
       {
         "pagePath": "pages/test/test",
         "text": "测试页",
-        "iconPath": "Image/500684.png",
-        "selectedIconPath": "Image/500685.png"
+        "iconPath": "Image/500686.png",
+        "selectedIconPath": "Image/500687.png"
       },
       {
         "pagePath": "pages/logs/logs",
         "text": "日志页",
-        "iconPath": "Image/500684.png",
-        "selectedIconPath": "Image/500685.png"
+        "iconPath": "Image/500686.png",
+        "selectedIconPath": "Image/500687.png"
       }
     ]
   },

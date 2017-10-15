@@ -1,4 +1,5 @@
 var app = getApp();
+var common = require('../../common/common.js')
 Page({
   
   /**
@@ -6,8 +7,19 @@ Page({
    */
   data: {
     username:"璇狼之风",
-    userpass:null
+    userpass:null,
+    id:3,
+    bol:false
   }, 
+  show:function(){
+    var boll = this.data.bol;
+    this.setData({
+      bol: !boll
+    });
+  },
+  say: function () {
+    common.sayHello(this.data.username);
+  },
   tianzhuan: function () {
     //tabBar中进行页面跳转的话需要用 switchTab 别的 wx.navigateTo 再说
     wx.switchTab({
@@ -22,6 +34,7 @@ Page({
       }
     })
   },
+  
   /**
    * 生命周期函数--监听页面加载
    */
