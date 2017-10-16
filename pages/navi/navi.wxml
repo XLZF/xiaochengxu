@@ -2,3 +2,6 @@
 <text>pages/navi/navi.wxml</text>
 <view>Navi.wxml 页面</view>
 <button bindtap='fanhui'>返回</button>
+<template name="item">
+    <view>item.wxml 中的模板{{username}}</view>
+</template>

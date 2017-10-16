@@ -43,4 +43,36 @@
   <view>第三个对象：{{time}}</view>
 </template>
 <template is="msgItem" data="{{...item,time:username}}"/>
+<!-- for 详解 -->
+<view wx:for="{{arr}}" wx:for-index="ind" wx:for-item="itemName">
+  下标是：{{ind}}~~~当前项是：{{itemName}}
+</view>
+<!-- for 嵌套 9*9 乘法表 -->
+<view style='display:inline-block;' wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:for-item="i">
+  <view wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:for-item="j">
+    <view wx:if="{{i <= j}}">
+      {{i}}*{{j}}={{i*j}}
+    </view>
+  </view>
+</view>
+<!-- 事件 冒泡  阻止冒泡  bindtap 这个地方开始冒泡，其中中间可以用 catchtap 阻止冒泡 -->
+<view id="outer_view" style="border:1px solid red;" bindtap="outerchange">
+  外层
+  <view id="center_view" style="border:1px solid yellow;" catchtap="centerchange">
+    中层
+    <view id="inner_view" style="border:1px solid green;" catchtouchstart="innerchange">
+      核心层
+    </view>
+  </view>
+</view>
+<!-- 引用  import 引入模板内容-->
+<!-- <import src="../navi/navi.wxml"/>
+<template is="item" data="{{username:username}}"></template> -->
 
+<!-- 引入 include 引入除模板外的其他全部内容 -->
+<include src="../navi/navi.wxml"/>
+<template is="item" data="{{username:username}}"></template>
+
+<!-- Wxss -->
+
+<view class="rpx"></view>

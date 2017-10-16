@@ -1,4 +1,6 @@
 /* pages/test/test.wxss */
+@import "common.wxss";
 .avtive{
    color: red;
 }
+

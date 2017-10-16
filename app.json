@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/test/test",
-    "pages/navi/navi"
+    "pages/navi/navi",
+    "pages/test2/test2"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -31,8 +32,8 @@
         "selectedIconPath": "Image/500687.png"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "日志页",
+        "pagePath": "pages/test2/test2",
+        "text": "测试页2",
         "iconPath": "Image/500686.png",
         "selectedIconPath": "Image/500687.png"
       }

@@ -16,6 +16,19 @@ Page({
       msg: 'this is a template'
     }
   }, 
+  outerchange:function () 
+  {
+    console.log("outerchange！！！");
+  },
+  centerchange:function()
+  {
+    console.log("centerchange！！！");
+  },
+  innerchange:function(event)
+  {
+    console.log(event);
+    console.log("innerchange！！！");
+  },
   show:function(){
     var boll = this.data.bol;
     this.setData({
