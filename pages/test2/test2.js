@@ -6,7 +6,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    toView:"a"
+    toView:"a",
+    imageUrl:[
+      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
+      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
+    ],
+    inter:1000,
+    autoplay:true
   },
   scrolltoupper:function(e){
     console.log(e);
@@ -26,6 +33,20 @@ Page({
     this.setData({
       toView:order[index]
     })
+  },
+  ChangSwiper:function(e){
+    console.log(e);
+  },
+  innervalChange:function(e){
+    var interValue = e.detail.value;
+    this.setData({
+      inter:interValue
+    });
+  },
+  ChangeAutoPlay:function(){
+    this.setData({
+      autoplay:!this.data.autoplay
+    });
   },
   /**
    * 生命周期函数--监听页面加载

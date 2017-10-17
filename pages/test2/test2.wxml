@@ -11,11 +11,19 @@
 </view> -->
 
 <!-- scroll view -->
-<scroll-view class="wrap" scroll-y="true" scroll-x="true" upper-threshold="100" lower-threshold="100" bindscrolltoupper="scrolltoupper" bindscrolltolower="scrolltolower" scroll-into-view="{{toView}}" bindscroll="bindscroll">
+<!-- <scroll-view class="wrap" scroll-y="true" scroll-x="true" upper-threshold="100" lower-threshold="100" bindscrolltoupper="scrolltoupper" bindscrolltolower="scrolltolower" scroll-into-view="{{toView}}" bindscroll="bindscroll">
     <view id='a' class="aa">a</view>
     <view id='b' class="bb">b</view>
     <view id='c' class="cc">c</view>
     <view id='d' class="dd">d</view>
     <view id='e' class="ee">e</view>
 </scroll-view>
-<button bindtap="tapChange">切换</button>
+<button bindtap="tapChange">切换</button> -->
+ <!-- swiper 内容轮播  -->
+<swiper indicator-dots="true" autoplay="{{autoplay}}" interval="{{inter}}" duration="500" current="2" bindchange="ChangSwiper">
+  <swiper-item wx:for="{{imageUrl}}">
+    <image src='{{item}}' width="350" height="200"/>
+  </swiper-item>
+</swiper>
+<slider show-value='true' min='1000' max='5000' bindchange='innervalChange' />
+<button bindtap='ChangeAutoPlay' style='width:400rpx'>切换自动/手动</button>
