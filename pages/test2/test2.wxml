@@ -20,10 +20,49 @@
 </scroll-view>
 <button bindtap="tapChange">切换</button> -->
  <!-- swiper 内容轮播  -->
-<swiper indicator-dots="true" autoplay="{{autoplay}}" interval="{{inter}}" duration="500" current="2" bindchange="ChangSwiper">
+<!-- <swiper indicator-dots="true" autoplay="{{autoplay}}" interval="{{inter}}" duration="500" current="2" bindchange="ChangSwiper">
   <swiper-item wx:for="{{imageUrl}}">
-    <image src='{{item}}' width="350" height="200"/>
+    <image src="{{item}}" width="350" height="200"/>
   </swiper-item>
 </swiper>
 <slider show-value='true' min='1000' max='5000' bindchange='innervalChange' />
-<button bindtap='ChangeAutoPlay' style='width:400rpx'>切换自动/手动</button>
+<button bindtap='ChangeAutoPlay' style='width:400rpx'>切换自动/手动</button> -->
+
+<!-- icon -->
+<!-- <view class="group">
+  <block wx:for="{{iconSize}}">
+    <icon type="success" size="{{item}}"/>
+  </block>
+</view>
+<view class="group">
+  <block wx:for="{{iconType}}">
+    <icon type="{{item}}" size="20"/>
+  </block>
+</view>
+<view class="group">
+  <block wx:for="{{iconColor}}">
+    <icon type="success" size="20" color="{{item}}"/>
+  </block>
+</view> -->
+
+<!-- text -->
+<!-- <view>天龙八部。天龙八部。天龙八部</view>
+<text selectable="true">天龙八部。天龙八部。天龙八部 text</text> -->
+
+<!-- progress -->
+<!-- <progress percent="{{progressVal}}" show-info />
+<progress percent="40" stroke-width="12" show-info />
+<progress percent="60" color='blue' show-info />
+<progress percent="80" active show-info/> -->
+
+<!-- button -->
+<form bindsubmit='subFn' bindreset='resetFn'>  
+  <input type='text' name="txtname" placeholder="请输入您的用户名" placeholder-class="other-placeholder" maxlength="20" bindinput="inputFn" bindfocus="inputfocusFn" bindblur="inputBlurFn"></input>
+  <checkbox-group bindchange="CheckChange">
+    <label wx:for="{{country}}">
+      <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+    </label>
+  </checkbox-group>
+  <button type="primary" size="mini" plain loading hover-class='other-hover-class' form-type='submit'>按钮</button>
+  <button type="warn" size="mini" plain loading hover-class='other-hover-class' form-type='reset'>重置</button>
+</form>

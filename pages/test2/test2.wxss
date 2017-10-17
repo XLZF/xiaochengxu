@@ -50,3 +50,10 @@
 .ee{
   background-color: gold;
 }
+.other-hover-class{
+  opacity: 0.1
+}
+.other-placeholder{
+  font-size: 40rpx;
+  color: gold;
+}
