@@ -55,14 +55,65 @@
 <progress percent="60" color='blue' show-info />
 <progress percent="80" active show-info/> -->
 
-<!-- button -->
-<form bindsubmit='subFn' bindreset='resetFn'>  
+<!-- form -->
+<!-- <form bindsubmit='subFn' bindreset='resetFn'>
+  <view class='second_title'>input</view>
   <input type='text' name="txtname" placeholder="请输入您的用户名" placeholder-class="other-placeholder" maxlength="20" bindinput="inputFn" bindfocus="inputfocusFn" bindblur="inputBlurFn"></input>
+  <view class='second_title'>checkbox</view>
   <checkbox-group bindchange="CheckChange">
     <label wx:for="{{country}}">
       <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
     </label>
   </checkbox-group>
+  <view class='second_title'>picker 选择器</view>
+  <picker value='{{index}}' range='{{citys}}' bindchange='PickerChange'>
+    <view>选择城市：{{citys[index]}}</view>
+  </picker>
+  <picker mode="time" start="09:01" end="21:01" bindchange='PickerTimeChange'>
+    <view>选择时间：{{time}}</view>
+  </picker>
+  <picker mode="date" start="2015-01-01" end="2018-01-01" bindchange='PickerDateChange' value='{{date}}'>
+    <view>选择日期：{{date}}</view>
+  </picker>
+  <view class='second_title'>单选框</view>
+  <radio-group bindchange="radioChange">
+     <label wx:for="{{country}}">
+      <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+    </label>
+  </radio-group>
+  <view class='second_title'>滑动选择器</view>
+  <slider max='100' min='0' show-value='true' step='10' value='10' bindchange='sliderChange'/>
+  <view class='second_title'>开关选择器</view>
+  <switch checked='true' type='checkbox' bindchange='swichchange'/>
+  <view class='second_title'>多行文本</view>
+  <textarea class='textareaClass' placeholder='请输入...' placeholder-class="other-placeholder" auto-height='true' bindlinechange='textarealineChange'/>
+  <view class='second_title'>button</view>
   <button type="primary" size="mini" plain loading hover-class='other-hover-class' form-type='submit'>按钮</button>
   <button type="warn" size="mini" plain loading hover-class='other-hover-class' form-type='reset'>重置</button>
+  <view class='second_title'>交互反馈</view>
+  <button type="primary" size='mini' plain bindtap='ShowAction'>交互反馈</button>
+  <view class='second_title'>模态弹窗</view>
+  <button type='primary' size='mini' plain='true' bindtap='ShowModal'>显示模态弹窗</button>
+  <view class='second_title'>消息提示框</view>
+  <button type='primary' size='mini' plain='true' bindtap='ShowToast'>显示消息提示框</button>
+  <view class='second_title'>带参数跳转页面</view>
+  <navigator hover-class='navi-class' url='../navi/navi?id=123&user=admin'>跳转Navi</navigator>
 </form>
+<view class='second_title'>音频</view>
+<audio src='{{src}}' name='{{name}}' poster='{{poster}}' author='{{author}}' controls='true' loop='true' id='myAudio'></audio>
+<button type="primary" size='mini' bindtap="audioPlay">播放</button>
+<button type="primary" size='mini' bindtap="audioPause">暂停</button>
+<button type="primary" size='mini' bindtap="audio14">设置当前播放时间为14秒</button>
+<button type="primary" size='mini' bindtap="audioStart">回到开头</button>
+<view class='second_title'>图片</view>
+<view>原图</view>
+<image src='{{imageSrc}}'></image>
+<view wx:for="{{imageArray}}">
+  <view>{{item.text}}</view>
+  <image src='{{imageSrc}}' mode='{{item.mode}}' style='width:400rpx;height:400rpx;background-color:green;'></image>
+</view> -->
+<!-- <view class='second_title'>video</view>
+<video src='http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400' danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video> -->
+<view class='second_title'>地图</view>
+<map id="map" longitude="113.324520" latitude="23.099994" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;"></map>
+<button type='primary' size='mini' bindtap='getPos'>我的位置</button>

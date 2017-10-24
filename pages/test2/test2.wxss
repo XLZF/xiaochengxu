@@ -57,3 +57,16 @@
   font-size: 40rpx;
   color: gold;
 }
+.textareaClass{
+  border:1rpx solid gold;
+  height: 100rpx;
+  color: rebeccapurple;
+}
+.navi-class{
+  color: red;
+}
+.second_title{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  background-color:cornflowerblue;
+}
